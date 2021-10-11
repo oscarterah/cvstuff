@@ -11,7 +11,6 @@
 template<typename D>
 struct ImgOps
 {
-//    template<cv::Mat img, cv::Mat imgk>
     void Run(cv::Mat img, cv::Mat imgk)
     {
         D* ptr = static_cast<D*>(this);
@@ -21,7 +20,6 @@ struct ImgOps
 
 struct ImgOpsGray : public ImgOps<ImgOpsGray>
 {
-//    template<typename TI>
     void Imp(cv::Mat img, cv::Mat imgk)
     {
         cv::namedWindow("ImgOpsGray", cv::WINDOW_AUTOSIZE);
@@ -35,7 +33,6 @@ struct ImgOpsGray : public ImgOps<ImgOpsGray>
 
 struct ImgOpsCanny : public ImgOps<ImgOpsCanny>
 {
-//    template<typename TI>
     void Imp(cv::Mat img, cv::Mat imgk)
     {
         cv::namedWindow("ImgOpsCanny", cv::WINDOW_AUTOSIZE);
@@ -47,7 +44,6 @@ struct ImgOpsCanny : public ImgOps<ImgOpsCanny>
 
 struct ImgOpsBlur : public ImgOps<ImgOpsBlur>
 {
-//    template<typename TI>
     void Imp(cv::Mat img, cv::Mat imgk)
     {
         cv::namedWindow("ImgOpsBlur", cv::WINDOW_AUTOSIZE);
